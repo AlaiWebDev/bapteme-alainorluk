@@ -110,8 +110,6 @@ session_start([
   ]);
 ```
 
-
-
 ## **Et pour finir sans oublier les bases…**
 
 ### **La sémantique et le référencement naturel**
