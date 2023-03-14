@@ -87,14 +87,14 @@ $teacherFromDb = Teacher::find($teacherid);
 
 ## **Gestion de la session**
 
-Pour aller plus loin, tu pourrais te pencher sur la sécurisation des ID de session lors du démarrage et lors des test de continuité.  
+Pour aller plus loin, tu pourrais te pencher sur la sécurisation des ID de session lors du démarrage et lors des tests de continuité.  
 Voir notamment le paramètre `use_strict_mode` de la fonction `session_start()`.  
 Voici ce que dit la documentation officielle PHP :  
->Bien que l'activation de session.use_strict_mode soit obligaroite pour la sécurité des sessions, cette directive est désactivée par défaut.
+>Bien que l'activation de `session.use_strict_mode` soit obligatoiree pour la sécurité des sessions, cette directive est désactivée par défaut.
 >
 >Ce mode évite que le module de session utilise un identifiant de session non initialisé. Dit différemment, le module de session ne va accepter que les identifiants de sessions valides générés par le module de session. Il va rejeter tous les identifiants de session fournis par les utilisateurs.
 >
->En raison de la spécification des cookies, les attaquants sont capable de placer des cookies contenant les identifiants de sessions en configurant localement une base de données de cookie ou par injections Javascript. session.use_strict_mode peut éviter qu'un attaquant n'initialise un identifiant de session.
+>En raison de la spécification des cookies, les attaquants sont capable de placer des cookies contenant les identifiants de sessions en configurant localement une base de données de cookie ou par injections Javascript. `session.use_strict_mode` peut éviter qu'un attaquant n'initialise un identifiant de session.
 
 La documentation se trouve [ICI](https://www.php.net/manual/en/session.security.ini.php).  
 

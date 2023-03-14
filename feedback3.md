@@ -58,7 +58,7 @@ Ainsi tu augmentes la clarté et la compréhension du code et évites les compor
 
 ### **La sémantique et le référencement naturel**
 
-Le code de ton fichier `header.tpl.php` :  
+Le code de ton fichier `home.tpl.php` :  
 
 ```html
 <html lang="en">
