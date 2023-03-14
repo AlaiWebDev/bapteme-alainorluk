@@ -12,7 +12,7 @@ J'ai remarqué que tu sembles avoir des difficultés avec certains concepts de l
 C'est peut-être pour cette raison que tu n'as pas pu aller très loin dans l'implémentation de ce que l'énoncé demandait.  
 Tu n'as notamment implémenté aucune méthode d'écriture.  
 Problème de temps ou inconfort dans la conception ?  
-N'hésite pas à m'en dire plus si tu le souhaites.  
+N'hésite pas à m'en dire plus si tu le souhaites et nous mettrons en oeuvre une action si nécessaire.  
 
 Jetons un oeil au code que tu as rendu et notamment à la classe `CoreModel` :  
 
@@ -38,3 +38,26 @@ $studentsList = $newstudent->findAll();
 
 Et tu aurais alors reçu un message comme celui-ci :  
 > `Cannot make static method…`
+
+## **Et pour finir sans oublier les bases…**
+
+### **La sémantique et le référencement naturel**
+
+Le code de ton fichier `header.tpl.php` :  
+
+```html
+<html lang="en">
+```
+
+Le contenu de ton application est en français.  
+Pense donc à préciser la langue utilisée afin d'améliorer le référencement naturel de tes pages.  
+
+Toujours pour le référencement naturel, au lieu d'utiliser la balise `<div>` en tant que conteneur principal n'hésite pas à utiliser une balise à la sémantique plus forte telle que `<main>`.  
+
+```html
+<main class="container my-4">
+    …
+</main>
+```
+
+Tu peux aller voir [ICI](https://developer.mozilla.org/fr/docs/Glossary/Semantics) pour plus d'informations concernant la sémanique au sein d'un document HTML😊.  
