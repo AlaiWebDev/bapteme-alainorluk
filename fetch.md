@@ -6,7 +6,7 @@ Lieu: Rosheim
 Date : 19/03/2023  
 
 ---
-# **le conseil technique avancé à un.e apprenant.e**
+# **Le conseil technique avancé à un.e apprenant.e**
 
 ## **La méthode `fetch()` de l'API Fetch de JavaScript**
 
