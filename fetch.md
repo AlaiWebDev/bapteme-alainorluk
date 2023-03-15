@@ -11,6 +11,7 @@ Date : 19/03/2023
 ## **La méthode `fetch()` de l'API Fetch de JavaScript**
 
 La méthode JavaScript `fetch()` permet d'envoyer une requête HTTP à un serveur web (local ou distant, donc aussi bien vers notre très cher `http://localhost/` que vers l'API d'un serveur tel que `https://jsonplaceholder.typicode.com/todos`).  
+Elle est souvent utilisée pour récupérer des données à partir d'une API ou pour envoyer des données à un serveur.
 
 D'ailleurs vous devez savoir maintenant que lorsque vous tapez une url dans la barre d'adresse de votre navigateur préféré, vous envoyez également une requête au serveur qui héberge la ressource demandée via l'URL.  
 
@@ -69,3 +70,33 @@ fetch('https://jsonplaceholder.typicode.com/todos')
     )
   .catch(error => console.error("Oups, erreur détectée : \n", error));
 ```
+
+Dans cet exemple, nous appelons la fonction `fetch()` avec l'URL de l'API que nous voulons interroger. `fetch()` renvoie une ***promesse*** ou ***promise*** pour les anglophones  (qui est un objet qui fera certainement… l'objet😁 d'une séance avec votre formateur) qui représente la réponse du serveur.  
+
+J'utilise ensuite la méthode `then()` pour traiter la réponse du serveur. La méthode `then()` prend une fonction de rappel (**callback**) qui sera appelée lorsque la réponse du serveur sera disponible. Dans cet exemple, on appelle la méthode `json()` sur la réponse pour extraire les données JSON de la réponse. Ensuite, on affiche les données dans la console.  
+
+Si quelque chose se passe mal lors de la récupération des données, on peut utiliser la méthode `catch()` pour traiter l'erreur. Dans cet exemple, j'affiche dans la console un petit message personnalisé et puis le libellé de l'erreur.  
+
+Il est important de noter que la méthode `fetch()` ne gère pas les erreurs HTTP comme les codes 404 ou 500. Elle traite uniquement les erreurs réseau ou de communication. Si on souhaite gérer les erreurs HTTP, il faut vérifier le code de statut HTTP de la réponse dans la méthode `then()`.  
+
+L'API `fetch()` prend en charge plusieurs options pour personnaliser les requêtes. Par exemple, on peut spécifier la méthode HTTP utilisée pour la requête (GET, POST, PUT, DELETE, etc.), les en-têtes HTTP, les données à envoyer avec la requête, et encore many more stuff😆.  
+
+Voici un exemple d'utilisation de l'API `fetch()` avec des options personnalisées :  
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ title: 'Mon titre',
+  body: 'Le blabla',
+  userId: 25, })
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Oups, erreur détectée : \n", error));
+```
+
+Dans cet exemple, j'envoies une requête POST avec des données JSON en utilisant l'option `body`. Je précise également l'en-tête "Content-Type" pour indiquer au serveur que nous envoyons des données JSON.  
+Par contre la requête n'est pas réellement exécutée sur le serveur (ben oui les gens qui gère l'API vont pas VRAIMENT laisser n'importe qui écrire sur leur BDD😂). Mais le serveur check tout de même la conformité de la requète et envoie une réponse, en l'occurence le statut 201 et un rappel des données envoyées.  
