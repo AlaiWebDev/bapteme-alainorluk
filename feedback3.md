@@ -35,7 +35,7 @@ Cette implémentation permet de mapper dynamiquement les routes lors des redirec
 public function generate($routeName, array $params = [])
 ```
 
-Dans ton projet tu gère les redirection en "**dur**" en désignant littérallement les fichiers html :  
+Dans ton projet tu gères les redirection en "**dur**" en désignant littérallement les fichiers html :  
 
 ```html
 <a class="navbar-brand" href="../index.html">
