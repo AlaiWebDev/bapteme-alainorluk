@@ -3,7 +3,7 @@
 Author: Alain ORLUK / O'clock  
 Formation : Développeur Web & Web mobile - L'API Fetch de JavaScript
 Lieu: Rosheim
-Date : 19/03/2023  
+Date : 15/03/2023  
 
 ---
 # **Retour sur un MCD d’un.e apprenant.e**
@@ -71,6 +71,6 @@ Personnellement celles que j'utilise le plus régulièrement sont :
 - L'application Paint sous Windows. Ou bon ok c'est loin d'être facile et agréable 😜
 - Une simple feuille de papier. Ben oui quoi, si c'est juste pour vous c'est suffisant, non ?😊
 
-***Note à l'intention du staff O'clock :***  
+***Note à l'intention des correcteurs O'clock :***  
 Je n'ai pas utilisé ces applis car d'une part je ne me souviens plus de la syntaxe sur **MoCoDo** (plus utilisé depuis…pff, au moins !😁) et que j'ai résilié mon abonnement à **Lucidchart** pour l'instant.  
 Je me suis donc servi de Paint 😄.  

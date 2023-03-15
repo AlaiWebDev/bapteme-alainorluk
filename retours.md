@@ -3,7 +3,7 @@
 Author: Alain ORLUK / O'clock  
 Formation : Développeur Web & Web mobile - PHP 
 Lieu: Rosheim
-Date : 19/03/2023  
+Date : 15/03/2023  
 
 ---
 # **Retours à l’équipe pédagogique O’clock**
@@ -21,10 +21,14 @@ L'apprenant a il me semble intégré les grands concepts d'entrée dans l'éco-s
 
 ## **Apprenant 2**
 
-🟡 Des Choses à Travailler
+🟠 Insuffisant pour Valider
 
-L'apprenant semble au point de bascule.  
-Il pourrait passer rapidement en mode "validé" via une meilleure compréhension et une pratique plus régulière de la Programmation Orientée Objet, au moins dans ses notions d'héritage et de polymoorphisme, puisqu'il a semble t-il intégré la notion de visibilité.  
+L'apprenant semble sur la bonne voie.  
+Il pourrait progresser plus efficacement via une meilleure compréhension et une pratique plus régulière de la Programmation Orientée Objet, au moins dans ses notions d'héritage et de polymoorphisme.  
+Par ailleurs il n'a implémenté aucune opération d'écriture dans la BDD dans son rendu.  
+Peut-être ne s'est-il pas encore approprié le modèle MVC.  
+Un resserage des attendus autours du CRUD pourrait lui permettre de focaliser son travail sur des points particuliers.  
+Il pourrait aussi être opportun de lui proposer successivement des micro-projets axés sur un concept clé.  
 
 ## **Apprenant 3**
 

@@ -3,7 +3,7 @@
 Author: Alain ORLUK / O'clock  
 Formation : Développeur Web & Web mobile - L'API Fetch de JavaScript
 Lieu: Rosheim
-Date : 19/03/2023  
+Date : 15/03/2023  
 
 ---
 # **Le conseil technique avancé à un.e apprenant.e**
@@ -100,3 +100,32 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 Dans cet exemple, j'envoies une requête POST avec des données JSON en utilisant l'option `body`. Je précise également l'en-tête "Content-Type" pour indiquer au serveur que nous envoyons des données JSON.  
 Par contre la requête n'est pas réellement exécutée sur le serveur (ben oui les gens qui gère l'API vont pas VRAIMENT laisser n'importe qui écrire sur leur BDD😂). Mais le serveur check tout de même la conformité de la requète et envoie une réponse, en l'occurence le statut 201 et un rappel des données envoyées.  
+
+Voici maintenant un exemple plus concret puisqu'il va prendre place au sein de ton projet.  
+
+Dans la fonction cardDetails, nous allons remplacer l'appel à la méthode `getCard()` de `dataMapper` par l'implémentation de la méthode `fetch()` :  
+
+```js
+cardDetails: async function (request, response) {
+    const cardId = parseInt(request.params.id, 10)
+
+    try {
+      const fetchResponse = await fetch(`http://localhost:3000/card/${cardId}`);
+      if (fetchResponse.ok) { // Vérifie si la réponse est de type 200-299
+        const card = await fetchResponse.json();
+        response.render('cardDetails', {card});
+      } else {
+        //pas d'erreur SQL mais on n'a récupéré aucun enregistrement, on le signale au navigateur
+        response.status(404).send(`Card with id ${cardId} not found`);
+      }
+    } catch (error) {
+      console.error(error);
+      response.status(500).render('error');
+    }
+}
+```
+
+***Note à l'intention des correcteurs O'clock :***  
+J'ai rencontré une erreur 404 ici et je n'ai pas pu la résoudre.  
+Dans tous les cas j'aimerais avoir un retour sur la cause de cette erreur si cela est envisageable de votre côté.  
+Merci d'avance 😊.
